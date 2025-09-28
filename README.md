@@ -52,8 +52,6 @@ Optional: Violetfin makes heavy use of Backdrops with moving animations. Enable 
 
 4. Click Save
 
----
-
 ## Development
 
 ### Project Structure
