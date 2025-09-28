@@ -120,7 +120,8 @@ body {
   background-color: rgba(0, 0, 0, 0.6) !important;
 }
 
-.dark .monitor-list > .item:hover, .dark .monitor-list > .item.active {
+.dark .monitor-list > .item:hover,
+.dark .monitor-list > .item.active {
   background-color: rgba(0, 0, 0, 0.6) !important;
 }
 

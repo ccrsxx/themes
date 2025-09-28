@@ -58,7 +58,7 @@
 }
 
 .hideMainDrawer .backgroundContainer {
-  background-image: url("login.png");
+  background-image: url('login.png');
   background-size: cover;
 }
 .hideMainDrawer .skinHeader {
@@ -106,7 +106,8 @@
   backdrop-filter: blur(1rem);
 }
 
-.mdl-slider::-webkit-slider-thumb, .mdl-slider::-moz-range-thumb {
+.mdl-slider::-webkit-slider-thumb,
+.mdl-slider::-moz-range-thumb {
   background-color: violet;
 }
 
@@ -299,15 +300,18 @@ progress + span {
   color: violet !important;
 }
 
-:is(#repositories,
-.subtitleList,
-.viewOrderList,
-.activityItems,
-.systemProfiles,
-.subtitleResults,
-.notificationList,
-.divScheduledTasks,
-.userActivityItems) .listItemIcon {
+:is(
+    #repositories,
+    .subtitleList,
+    .viewOrderList,
+    .activityItems,
+    .systemProfiles,
+    .subtitleResults,
+    .notificationList,
+    .divScheduledTasks,
+    .userActivityItems
+  )
+  .listItemIcon {
   background-color: violet !important;
 }
 
@@ -315,7 +319,7 @@ progress + span {
   background-color: violet !important;
 }
 
-.content-primary > div[data-role=controlgroup] > .ui-btn-active {
+.content-primary > div[data-role='controlgroup'] > .ui-btn-active {
   background-color: violet !important;
   color: white !important;
 }
