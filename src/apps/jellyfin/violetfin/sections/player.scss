@@ -1,0 +1,52 @@
+@use '../../../../lib/helper';
+@use '../../../../lib/variables';
+
+.playerStats {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: none;
+  transition: all 200ms;
+  transition-property: background-color, backdrop-filter;
+
+  &:hover {
+    @include helper.backdrop-blur($opacity: 0.6);
+  }
+}
+
+// Overriding slider thumb colors
+.mdl-slider {
+  &::-webkit-slider-thumb,
+  &::-moz-range-thumb {
+    background-color: variables.$accent-color;
+  }
+}
+
+// Fetching additional data info above slider
+.osdMediaStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// Volume tooltip when changing volume
+.iconOsd {
+  @include helper.backdrop-blur($opacity: 0.6);
+}
+
+// Tooltip above the volume buttons
+.volumeButtons .sliderBubble {
+  z-index: 10;
+  border-radius: variables.$border-radius;
+
+  @include helper.backdrop-blur($opacity: 0.6);
+}
+
+// Fix weird black bar on chapter slider tooltip
+.osdControls .sliderBubble {
+  border-radius: variables.$border-radius;
+
+  .chapterThumbContainer {
+    display: flex;
+    overflow: hidden;
+    border-radius: variables.$border-radius;
+  }
+}

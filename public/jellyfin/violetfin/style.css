@@ -1,0 +1,377 @@
+@keyframes moving-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moving-background-animation {
+  0% {
+    background-position: 99% 1%;
+  }
+  20% {
+    background-position: 1% 50%;
+  }
+  40% {
+    background-position: 99% 99%;
+  }
+  60% {
+    background-position: 1% 1%;
+  }
+  80% {
+    background-position: 50% 99%;
+  }
+  100% {
+    background-position: 99% 1%;
+  }
+}
+/* Reduce background backdrop opacity */
+.backgroundContainer.withBackdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* TODO: Fix backdrop flickering when the browser idling and unfocussed for long time  */
+/* Remove default backdrop image animation */
+.backdropImageFadeIn {
+  animation: none;
+}
+
+/* Apply moving backdrop image */
+.layout-desktop .backdropImage {
+  background-size: 150% 150%;
+  background-position: 99% 1%;
+  animation-name: moving-fade-in, moving-background-animation;
+  animation-duration: 1s, 180s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1, infinite;
+}
+
+/* Apply moving backdrop image for mobile */
+.layout-mobile .backdropImage {
+  background-size: cover;
+  background-position: 99% 1%;
+  animation-name: moving-fade-in, moving-background-animation;
+  animation-duration: 1s, 180s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1, infinite;
+}
+
+.hideMainDrawer .backgroundContainer {
+  background-image: url("login.png");
+  background-size: cover;
+}
+.hideMainDrawer .skinHeader {
+  display: none;
+}
+
+#loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+#loginPage h1 {
+  display: none;
+}
+#loginPage > div {
+  width: 100%;
+  padding: 2rem !important;
+  max-width: 36rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#loginPage .inputContainer {
+  display: grid;
+  gap: 0.25rem;
+}
+#loginPage .inputContainer .emby-input {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border: 0;
+}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {
+  display: none;
+}
+
+.playerStats {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: none;
+  transition: all 200ms;
+  transition-property: background-color, backdrop-filter;
+}
+.playerStats:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+}
+
+.mdl-slider::-webkit-slider-thumb, .mdl-slider::-moz-range-thumb {
+  background-color: violet;
+}
+
+.osdMediaStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconOsd {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+}
+
+.volumeButtons .sliderBubble {
+  z-index: 10;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+}
+
+.osdControls .sliderBubble {
+  border-radius: 0.2rem;
+}
+.osdControls .sliderBubble .chapterThumbContainer {
+  display: flex;
+  overflow: hidden;
+  border-radius: 0.2rem;
+}
+
+.skinHeader {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1rem);
+}
+.skinHeader.semiTransparent {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1rem) !important;
+}
+
+.listItem-withContentWrapper {
+  border-radius: 0.2rem;
+}
+.layout-desktop .listItem-withContentWrapper {
+  padding: 1rem;
+  transition: background-color 200ms;
+}
+.layout-desktop .listItem-withContentWrapper:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.layout-mobile .listItem-withContentWrapper {
+  padding: 0.5rem;
+}
+.layout-mobile .listItem-withContentWrapper .listItem-bottomoverview {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+.listItem-withContentWrapper .listItem-content > .listItemImage {
+  border-radius: 0.2rem;
+}
+
+.dialog {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.2rem !important;
+}
+.dialog .collapseContent {
+  background-color: transparent;
+}
+.dialog .actionSheetContent > .actionSheetScroller .actionsheetDivider {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.dialog .actionSheetContent > .actionSheetScroller .actionSheetMenuItem:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+  min-width: min-content;
+  max-width: 36rem;
+}
+
+/** GENERAL UI */
+.countIndicator,
+.playedIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator {
+  background-color: violet;
+}
+
+.mdl-spinner__layer {
+  border-color: violet;
+}
+
+:is(.detailButton, .emby-tab-button):hover {
+  color: violet;
+}
+
+.paper-icon-button-light:is(:hover, :active) {
+  color: violet !important;
+  background-color: rgba(238, 130, 238, 0.2) !important;
+}
+
+/** VIDEO PLAYER */
+.sliderMarker.watched,
+.mdl-slider-background-lower,
+.mdl-slider::-webkit-slider-thumb,
+.iconOsdProgressInner {
+  background-color: violet;
+}
+
+/** INPUT */
+:is(.emby-input, .emby-textarea):focus {
+  border-color: violet;
+}
+
+.mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__inner-circle {
+  fill: violet;
+}
+.mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__outer-circle {
+  stroke: violet;
+}
+.mdl-radio__button:focus + .mdl-radio__circles .mdl-radio__focus-circle {
+  background-color: violet;
+}
+
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused {
+  color: violet;
+}
+
+.emby-checkbox:checked + span + .checkboxOutline {
+  background-color: violet;
+}
+.emby-checkbox:is(:checked, :focus:not(:checked)) + span + .checkboxOutline {
+  border-color: violet;
+}
+
+.emby-select-withcolor:focus {
+  border-color: violet !important;
+}
+
+.button-submit,
+.button-submit:is(:focus, :active) {
+  background-color: violet;
+}
+
+.button-link {
+  color: violet;
+}
+
+.selectionCommandsPanel {
+  background-color: violet;
+}
+.selectionCommandsPanel .paper-icon-button-light:hover {
+  filter: brightness(1.7);
+}
+
+.itemSelectionPanel {
+  border-color: violet;
+  border-radius: 0.2rem;
+}
+
+/** SETTINGS */
+.navMenuOption-selected {
+  background-color: violet !important;
+}
+
+.MuiListItemButton-root.Mui-selected {
+  background-color: rgba(238, 130, 238, 0.2) !important;
+}
+
+.MuiChip-colorInfo,
+.MuiButton-containedPrimary {
+  background-color: violet;
+}
+
+progress {
+  border-radius: 0.2rem;
+}
+progress::-webkit-progress-bar {
+  border-radius: 0.2rem;
+}
+progress::-webkit-progress-value {
+  border-radius: 0.2rem;
+  background-color: violet;
+}
+progress + span {
+  color: violet !important;
+}
+
+:is(#repositories,
+.subtitleList,
+.viewOrderList,
+.activityItems,
+.systemProfiles,
+.subtitleResults,
+.notificationList,
+.divScheduledTasks,
+.userActivityItems) .listItemIcon {
+  background-color: violet !important;
+}
+
+.serverActivityItems > .listItem > .listItemIcon.notifications {
+  background-color: violet !important;
+}
+
+.content-primary > div[data-role=controlgroup] > .ui-btn-active {
+  background-color: violet !important;
+  color: white !important;
+}
+
+.defaultCardBackground {
+  background-color: violet;
+}
+
+:is(.innerCardFooter, .playbackProgress) .itemProgressBarForeground {
+  background-color: violet;
+}
+
+.MuiTabs-root .Mui-selected {
+  color: violet;
+}
+.MuiTabs-root .MuiTabs-indicator {
+  background-color: violet;
+}
+
+.trackSelections select:not(:disabled) {
+  border: 0;
+  padding: 0.25rem 0.5rem !important;
+}
+
+.layout-desktop .detailRibbon {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.layout-desktop #itemDetailPage > #itemBackdrop {
+  animation: none;
+  background-image: none !important;
+}
+.layout-desktop #itemDetailPage > #itemBackdrop::after {
+  background: transparent;
+}
+.layout-desktop .trackSelections select:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.layout-mobile .itemBackdrop {
+  margin-top: 4rem;
+}
+
+.mainDrawer {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+}
+.mainDrawer .navMenuOption:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.paperList {
+  border-radius: 0.2rem;
+}
+
+.dashboardSection > .paperList:has(#serverName) {
+  display: grid;
+}
+
+/*# sourceMappingURL=style.css.map */

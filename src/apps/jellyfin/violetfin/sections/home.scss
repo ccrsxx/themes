@@ -1,0 +1,60 @@
+@keyframes moving-fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moving-background-animation {
+  0% {
+    background-position: 99% 1%;
+  }
+  20% {
+    background-position: 1% 50%;
+  }
+  40% {
+    background-position: 99% 99%;
+  }
+  60% {
+    background-position: 1% 1%;
+  }
+  80% {
+    background-position: 50% 99%;
+  }
+  100% {
+    background-position: 99% 1%;
+  }
+}
+
+@mixin moving-backdrop-image($mobile: false) {
+  background-size: if($mobile, cover, 150% 150%);
+  background-position: 99% 1%;
+  animation-name: moving-fade-in, moving-background-animation;
+  animation-duration: 1s, 180s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1, infinite;
+}
+
+/* Reduce background backdrop opacity */
+.backgroundContainer.withBackdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* TODO: Fix backdrop flickering when the browser idling and unfocussed for long time  */
+
+/* Remove default backdrop image animation */
+.backdropImageFadeIn {
+  animation: none;
+}
+
+/* Apply moving backdrop image */
+.layout-desktop .backdropImage {
+  @include moving-backdrop-image();
+}
+
+/* Apply moving backdrop image for mobile */
+.layout-mobile .backdropImage {
+  @include moving-backdrop-image($mobile: true);
+}

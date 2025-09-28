@@ -1,0 +1,204 @@
+@use '../../../../lib/variables';
+
+/** GENERAL UI */
+
+// Card indicators
+.countIndicator,
+.playedIndicator,
+.fullSyncIndicator,
+.mediaSourceIndicator {
+  background-color: variables.$accent-color;
+}
+
+// Loading spinner
+.mdl-spinner__layer {
+  border-color: variables.$accent-color;
+}
+
+// Header tab button, series detail button
+:is(.detailButton, .emby-tab-button):hover {
+  color: variables.$accent-color;
+}
+
+// Header button, card series button, and card episode button
+.paper-icon-button-light:is(:hover, :active) {
+  color: variables.$accent-color !important;
+  background-color: rgba(variables.$accent-color, 0.2) !important;
+}
+
+// --------------------------------------------
+
+/** VIDEO PLAYER */
+
+// Chapter marker when watched on the seekbar
+.sliderMarker.watched ,
+// Current volume progress left side of the slider
+.mdl-slider-background-lower,
+// Watched progress left side of the slider
+.mdl-slider::-webkit-slider-thumb,
+.iconOsdProgressInner {
+  background-color: variables.$accent-color;
+}
+
+// --------------------------------------------
+
+/** INPUT */
+
+// Input component
+:is(.emby-input, .emby-textarea):focus {
+  border-color: variables.$accent-color;
+}
+
+// Radio button on sort by dialog
+.mdl-radio__button:focus + .mdl-radio__circles {
+  .mdl-radio__inner-circle {
+    fill: variables.$accent-color;
+  }
+
+  .mdl-radio__outer-circle {
+    stroke: variables.$accent-color;
+  }
+
+  .mdl-radio__focus-circle {
+    background-color: variables.$accent-color;
+  }
+}
+
+// Input label when focused
+.inputLabelFocused,
+.selectLabelFocused,
+.textareaLabelFocused {
+  color: variables.$accent-color;
+}
+
+.emby-checkbox {
+  // Checkbox background when checked
+  &:checked + span + .checkboxOutline {
+    background-color: variables.$accent-color;
+  }
+
+  // Checkbox outline when checked and focus but not checked
+  &:is(:checked, :focus:not(:checked)) + span + .checkboxOutline {
+    border-color: variables.$accent-color;
+  }
+}
+
+// Make select border color use the accent color when focused
+.emby-select-withcolor:focus {
+  border-color: variables.$accent-color !important;
+}
+
+// Submit button on normal state, focus, and active
+.button-submit,
+.button-submit:is(:focus, :active) {
+  background-color: variables.$accent-color;
+}
+
+// Button link on search result
+.button-link {
+  color: variables.$accent-color;
+}
+
+// Selection modal
+.selectionCommandsPanel {
+  background-color: variables.$accent-color;
+
+  // Brighten the icon on hover because the background blends with the icon
+  .paper-icon-button-light:hover {
+    filter: brightness(1.7);
+  }
+}
+
+// Selection modal item
+.itemSelectionPanel {
+  border-color: variables.$accent-color;
+  border-radius: variables.$border-radius;
+}
+
+// --------------------------------------------
+
+/** SETTINGS */
+
+// Sidebar menu when selected
+.navMenuOption-selected {
+  background-color: variables.$accent-color !important;
+}
+
+// Sidebar menu on settings with new material ui
+.MuiListItemButton-root.Mui-selected {
+  background-color: rgba(variables.$accent-color, 0.2) !important;
+}
+
+// Main primary new material ui button
+.MuiChip-colorInfo,
+.MuiButton-containedPrimary {
+  background-color: variables.$accent-color;
+}
+
+// Progress bar on running tasks
+progress {
+  border-radius: variables.$border-radius;
+
+  &::-webkit-progress-bar {
+    border-radius: variables.$border-radius;
+  }
+
+  &::-webkit-progress-value {
+    border-radius: variables.$border-radius;
+    background-color: variables.$accent-color;
+  }
+
+  & + span {
+    color: variables.$accent-color !important;
+  }
+}
+
+// Each container that has an item icon
+:is(
+    #repositories,
+    .subtitleList,
+    .viewOrderList,
+    .activityItems,
+    .systemProfiles,
+    .subtitleResults,
+    .notificationList,
+    .divScheduledTasks,
+    .userActivityItems
+  )
+  .listItemIcon {
+  background-color: variables.$accent-color !important;
+}
+
+// Only colors the notification icon that has info variant
+.serverActivityItems > .listItem > .listItemIcon.notifications {
+  background-color: variables.$accent-color !important;
+}
+
+// Tab on manage user profile
+.content-primary > div[data-role='controlgroup'] > .ui-btn-active {
+  background-color: variables.$accent-color !important;
+  color: white !important;
+}
+
+// Card background on active devices
+.defaultCardBackground {
+  background-color: variables.$accent-color;
+}
+
+// Progress bar on dashboard card footer and continue watching card
+:is(.innerCardFooter, .playbackProgress) .itemProgressBarForeground {
+  background-color: variables.$accent-color;
+}
+
+// Playback reporting tabs color and indicator
+.MuiTabs-root {
+  .Mui-selected {
+    color: variables.$accent-color;
+  }
+
+  .MuiTabs-indicator {
+    background-color: variables.$accent-color;
+  }
+}
+
+// --------------------------------------------

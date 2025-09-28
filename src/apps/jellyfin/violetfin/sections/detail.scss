@@ -1,0 +1,32 @@
+// Better select input audio and subtitles on movie detail page
+.trackSelections select:not(:disabled) {
+  border: 0;
+  padding: 0.25rem 0.5rem !important;
+}
+
+.layout-desktop {
+  // Detail ribbon transparent
+  .detailRibbon {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  // Make top item banner transparent
+  #itemDetailPage > #itemBackdrop {
+    animation: none;
+    background-image: none !important;
+
+    &::after {
+      background: transparent;
+    }
+  }
+
+  // Make select more transparent
+  .trackSelections select:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+// Prevent top item banner from hitting the nav bar on mobile
+.layout-mobile .itemBackdrop {
+  margin-top: 4rem;
+}

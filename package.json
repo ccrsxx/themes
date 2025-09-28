@@ -1,0 +1,38 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently npm:watch npm:serve",
+    "serve": "serve .",
+    "build": "node ./scripts/build.ts",
+    "watch": "node ./scripts/watch.ts",
+    "format": "prettier --write .",
+    "format:ci": "prettier --check .",
+    "prepare": "husky",
+    "type-check": "tsc --noEmit",
+    "build:commit": "node ./scripts/commit.ts"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "keywords": [],
+  "author": "ccrsxx",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.0.0",
+    "@commitlint/config-conventional": "^19.0.0",
+    "concurrently": "^8.2.2",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.5",
+    "sass": "^1.70.0",
+    "serve": "^14.2.1",
+    "typescript": "^5.9.2"
+  },
+  "volta": {
+    "node": "22.20.0"
+  }
+}

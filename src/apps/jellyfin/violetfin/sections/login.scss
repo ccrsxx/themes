@@ -1,0 +1,49 @@
+// Login background
+.hideMainDrawer {
+  .backgroundContainer {
+    background-image: url('login.png');
+    background-size: cover;
+  }
+
+  .skinHeader {
+    display: none;
+  }
+}
+
+#loginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+
+  // Hide "please login" text
+  h1 {
+    display: none;
+  }
+
+  // Form container
+  > div {
+    width: 100%;
+    padding: 2rem !important;
+    max-width: 36rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .inputContainer {
+    display: grid;
+    gap: 0.25rem;
+
+    .emby-input {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 0.5rem;
+      border: 0;
+    }
+  }
+
+  // Hide "forgot password" button
+  .raised.cancel.block.btnForgotPassword.emby-button {
+    display: none;
+  }
+}

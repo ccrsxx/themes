@@ -1,0 +1,51 @@
+@use '../../../../lib/variables';
+
+.shadow-box {
+  &.bg-maintenance {
+    background-color: rgba(23, 71, 245, 0.75) !important;
+  }
+
+  &:is(.list, .monitor-list) {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+.dark .monitor-list > .item {
+  &:hover,
+  &.active {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+.bg-primary {
+  background-color: variables.$accent-color !important;
+}
+
+.btn-primary,
+.btn-info {
+  background-color: variables.$accent-color;
+  border-color: variables.$accent-color;
+  transition: filter 200ms;
+
+  &:hover {
+    background-color: variables.$accent-color;
+    border-color: variables.$accent-color;
+    filter: brightness(1.2);
+  }
+}
+
+.hp-bar-big > .beat[data-v-636dc6a9] {
+  background-color: variables.$accent-color;
+}
+
+.link-active[data-v-f71ca08e] {
+  color: variables.$accent-color;
+}
+
+.extra-info > div > div {
+  background-color: variables.$accent-color !important;
+}
+
+.overall-status .ok[data-v-b8247e57] {
+  color: variables.$accent-color;
+}
