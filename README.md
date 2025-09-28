@@ -17,7 +17,7 @@ Here are the currently supported apps and their themes, there may be more in the
 2. Paste this CSS code into the Custom CSS input:
 
    ```css
-   @import url('https://ccrsxx.github.io/themes/public/jellyfin/violetfin/style.css');
+   @import url('https://themes.ccrsxx.com/public/jellyfin/violetfin/style.css');
    ```
 
 3. Click Save
@@ -47,7 +47,7 @@ Optional: Violetfin makes heavy use of Backdrops with moving animations. Enable 
 3. Paste this CSS code into the Custom CSS input:
 
    ```css
-   @import url('https://ccrsxx.github.io/themes/public/uptime-kuma/violetkuma/style.css');
+   @import url('https://themes.ccrsxx.com/public/uptime-kuma/violetkuma/style.css');
    ```
 
 4. Click Save
