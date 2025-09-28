@@ -4,6 +4,8 @@ This repository contains custom themes for my homelab apps, such as Jellyfin and
 
 ## Supported Apps & Themes
 
+Here are the currently supported apps and their themes, there may be more in the future:
+
 - **Jellyfin**: Violetfin
 - **Uptime Kuma**: Violetkuma
 
