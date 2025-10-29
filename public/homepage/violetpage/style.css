@@ -9,14 +9,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: red;
+  background-color: auto;
   border-radius: 20px;
   border-right: none;
   border-left: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: red;
+  background-color: auto;
 }
 
 ::-webkit-scrollbar-track-piece:end {
