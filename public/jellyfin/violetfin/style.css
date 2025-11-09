@@ -147,24 +147,24 @@
   backdrop-filter: blur(1rem) !important;
 }
 
-.listItem-withContentWrapper {
+.listItem {
   border-radius: 0.2rem;
 }
-.layout-desktop .listItem-withContentWrapper {
+.layout-desktop .listItem {
   padding: 1rem;
   transition: background-color 200ms;
 }
-.layout-desktop .listItem-withContentWrapper:hover {
+.layout-desktop .listItem:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.layout-mobile .listItem-withContentWrapper {
+.layout-mobile .listItem {
   padding: 0.5rem;
 }
-.layout-mobile .listItem-withContentWrapper .listItem-bottomoverview {
+.layout-mobile .listItem .listItem-bottomoverview {
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
-.listItem-withContentWrapper .listItem-content > .listItemImage {
+.listItem .listItem-content > .listItemImage {
   border-radius: 0.2rem;
 }
 
@@ -272,73 +272,6 @@
   border-radius: 0.2rem;
 }
 
-/** SETTINGS */
-.navMenuOption-selected {
-  background-color: violet !important;
-}
-
-.MuiListItemButton-root.Mui-selected {
-  background-color: rgba(238, 130, 238, 0.2) !important;
-}
-
-.MuiChip-colorInfo,
-.MuiButton-containedPrimary {
-  background-color: violet;
-}
-
-progress {
-  border-radius: 0.2rem;
-}
-progress::-webkit-progress-bar {
-  border-radius: 0.2rem;
-}
-progress::-webkit-progress-value {
-  border-radius: 0.2rem;
-  background-color: violet;
-}
-progress + span {
-  color: violet !important;
-}
-
-:is(
-    #repositories,
-    .subtitleList,
-    .viewOrderList,
-    .activityItems,
-    .systemProfiles,
-    .subtitleResults,
-    .notificationList,
-    .divScheduledTasks,
-    .userActivityItems
-  )
-  .listItemIcon {
-  background-color: violet !important;
-}
-
-.serverActivityItems > .listItem > .listItemIcon.notifications {
-  background-color: violet !important;
-}
-
-.content-primary > div[data-role='controlgroup'] > .ui-btn-active {
-  background-color: violet !important;
-  color: white !important;
-}
-
-.defaultCardBackground {
-  background-color: violet;
-}
-
-:is(.innerCardFooter, .playbackProgress) .itemProgressBarForeground {
-  background-color: violet;
-}
-
-.MuiTabs-root .Mui-selected {
-  color: violet;
-}
-.MuiTabs-root .MuiTabs-indicator {
-  background-color: violet;
-}
-
 .trackSelections select:not(:disabled) {
   border: 0;
   padding: 0.25rem 0.5rem !important;
@@ -368,14 +301,6 @@ progress + span {
 }
 .mainDrawer .navMenuOption:hover {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.paperList {
-  border-radius: 0.2rem;
-}
-
-.dashboardSection > .paperList:has(#serverName) {
-  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */
