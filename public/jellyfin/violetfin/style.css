@@ -194,7 +194,8 @@
 .countIndicator,
 .playedIndicator,
 .fullSyncIndicator,
-.mediaSourceIndicator {
+.mediaSourceIndicator,
+.itemProgressBarForeground {
   background-color: violet;
 }
 
