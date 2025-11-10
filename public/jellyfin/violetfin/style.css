@@ -147,24 +147,30 @@
   backdrop-filter: blur(1rem) !important;
 }
 
-.listItem {
+.listItem-border,
+.listItem-withContentWrapper {
   border-radius: 0.2rem;
 }
-.layout-desktop .listItem {
+.layout-desktop .listItem-border,
+.layout-desktop .listItem-withContentWrapper {
   padding: 1rem;
   transition: background-color 200ms;
 }
-.layout-desktop .listItem:hover {
+.layout-desktop .listItem-border:hover,
+.layout-desktop .listItem-withContentWrapper:hover {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.layout-mobile .listItem {
+.layout-mobile .listItem-border,
+.layout-mobile .listItem-withContentWrapper {
   padding: 0.5rem;
 }
-.layout-mobile .listItem .listItem-bottomoverview {
+.layout-mobile .listItem-border .listItem-bottomoverview,
+.layout-mobile .listItem-withContentWrapper .listItem-bottomoverview {
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
-.listItem .listItem-content > .listItemImage {
+.listItem-border .listItem-content > .listItemImage,
+.listItem-withContentWrapper .listItem-content > .listItemImage {
   border-radius: 0.2rem;
 }
 

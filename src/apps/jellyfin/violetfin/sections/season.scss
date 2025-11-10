@@ -1,6 +1,7 @@
 @use '../../../../lib/variables';
 
-.listItem {
+.listItem-border,
+.listItem-withContentWrapper {
   border-radius: variables.$border-radius;
 
   .layout-desktop & {
