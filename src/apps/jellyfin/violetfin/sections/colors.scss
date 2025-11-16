@@ -31,6 +31,11 @@
 
 /** VIDEO PLAYER */
 
+// Up next countdown text
+.upNextDialog-countdownText {
+  color: variables.$accent-color;
+}
+
 // Chapter marker when watched on the seekbar
 .sliderMarker.watched ,
 // Current volume progress left side of the slider
