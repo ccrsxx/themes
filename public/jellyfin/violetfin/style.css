@@ -219,6 +219,10 @@
 }
 
 /** VIDEO PLAYER */
+.upNextDialog-countdownText {
+  color: violet;
+}
+
 .sliderMarker.watched,
 .mdl-slider-background-lower,
 .mdl-slider::-webkit-slider-thumb,
