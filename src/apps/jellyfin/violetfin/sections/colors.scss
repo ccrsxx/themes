@@ -8,7 +8,12 @@
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .itemProgressBarForeground {
+  color: white;
   background-color: variables.$accent-color;
+
+  svg {
+    fill: white;
+  }
 }
 
 // Loading spinner
@@ -97,7 +102,12 @@
 // Submit button on normal state, focus, and active
 .button-submit,
 .button-submit:is(:focus, :active) {
+  color: white;
   background-color: variables.$accent-color;
+
+  &:hover {
+    background-color: rgba(variables.$accent-color, 0.8);
+  }
 }
 
 // Button link on search result

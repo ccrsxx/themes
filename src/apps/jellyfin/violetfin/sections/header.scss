@@ -1,0 +1,23 @@
+@use '../../../../lib/helper';
+@use '../../../../lib/variables';
+
+header {
+  &.MuiPaper-elevation1 {
+    @include helper.backdrop-blur($opacity: 0.6);
+  }
+
+  div > div > {
+    .MuiButton-textPrimary {
+      color: variables.$accent-color;
+    }
+
+    div > div > .MuiButton-colorPrimary {
+      color: white;
+      background-color: variables.$accent-color;
+
+      &:hover {
+        background-color: rgba(variables.$accent-color, 0.8);
+      }
+    }
+  }
+}

@@ -202,7 +202,15 @@
 .fullSyncIndicator,
 .mediaSourceIndicator,
 .itemProgressBarForeground {
+  color: white;
   background-color: violet;
+}
+.countIndicator svg,
+.playedIndicator svg,
+.fullSyncIndicator svg,
+.mediaSourceIndicator svg,
+.itemProgressBarForeground svg {
+  fill: white;
 }
 
 .mdl-spinner__layer {
@@ -264,7 +272,12 @@
 
 .button-submit,
 .button-submit:is(:focus, :active) {
+  color: white;
   background-color: violet;
+}
+.button-submit:hover,
+.button-submit:is(:focus, :active):hover {
+  background-color: rgba(238, 130, 238, 0.8);
 }
 
 .button-link {
@@ -306,12 +319,19 @@
   margin-top: 4rem;
 }
 
-.mainDrawer {
+header.MuiPaper-elevation1 {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(1rem);
 }
-.mainDrawer .navMenuOption:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+header div > div > .MuiButton-textPrimary {
+  color: violet;
+}
+header div > div > div > div > .MuiButton-colorPrimary {
+  color: white;
+  background-color: violet;
+}
+header div > div > div > div > .MuiButton-colorPrimary:hover {
+  background-color: rgba(238, 130, 238, 0.8);
 }
 
 /*# sourceMappingURL=style.css.map */
