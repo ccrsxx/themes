@@ -1,3 +1,9 @@
+// Login header
+// Hide the jellyfin logo and the "jellyfin" text
+header .MuiStack-root > a:only-of-type {
+  display: none !important;
+}
+
 // Login background
 .hideMainDrawer {
   .backgroundContainer {

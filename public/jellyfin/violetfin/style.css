@@ -57,6 +57,10 @@
   animation-iteration-count: 1, infinite;
 }
 
+header .MuiStack-root > a:only-of-type {
+  display: none !important;
+}
+
 .hideMainDrawer .backgroundContainer {
   background-image: url('login.png');
   background-size: cover;
